@@ -1,0 +1,67 @@
+{
+  "name": "reactts-mobx-parcel-pnpm",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --public-url '/'",
+    "prettify": "prettier --write 'src/**/*.{tsx}'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "helpful-decorators": "^1.7.2",
+    "lodash": "^4.17.11",
+    "lodash.debounce": "^4.0.8",
+    "lodash.memoize": "^4.1.2",
+    "lodash.once": "^4.1.1",
+    "lodash.throttle": "^4.1.1",
+    "mobx": "^5.5.0",
+    "mobx-logger": "^0.7.1",
+    "mobx-react": "^5.2.8",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "schedule": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "husky": "^1.0.0-rc.9",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.0",
+    "prettier": "^1.14.3",
+    "react-test-renderer": "^16.5.2",
+    "react-testing-library": "^5.1.0",
+    "ts-jest": "^23.10.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm run prettify && pnpm run test"
+    }
+  },
+  "engines": {
+    "node": ">= 8.11.0",
+    "npm": ">= 6.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
+  }
+}
