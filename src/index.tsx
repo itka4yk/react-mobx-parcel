@@ -1,11 +1,9 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import { enableLogging } from 'mobx-logger';
+import { enableLogging } from 'mobx-logger'
+import App from './App'
 import './index.css'
 
+enableLogging()
 
-enableLogging();
-
-import Root from './App'
-
-render(<Root />, document.getElementById('root'))
+render(<App />, document.getElementById('root'))

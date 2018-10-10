@@ -1,10 +1,10 @@
 {
-  "name": "reactts-mobx-parcel-pnpm",
+  "name": "react-mobx-parcel",
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html --public-url '/'",
-    "prettify": "prettier --write 'src/**/*.{tsx}'",
+    "prettify": "prettier --write src/**/*.tsx",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -20,9 +20,11 @@
     "mobx-logger": "^0.7.1",
     "mobx-react": "^5.2.8",
     "object-assign": "^4.1.1",
+    "polyfill": "^0.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "rxjs": "^6.3.3",
     "schedule": "^0.5.0"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "@types/react-dom": "^16.0.7",
     "husky": "^1.0.0-rc.9",
     "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
     "parcel-bundler": "^1.10.0",
     "prettier": "^1.14.3",
     "react-test-renderer": "^16.5.2",
@@ -44,8 +47,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm run prettify && pnpm run test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">= 8.11.0",
