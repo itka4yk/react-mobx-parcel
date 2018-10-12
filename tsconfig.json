@@ -4,7 +4,9 @@
     "module": "commonjs",
     "strict": true,
     "jsx": "react",
+    "lib": ["dom", "es2015"],
+    "types": ["reflect-metadata"],
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "emitDecoratorMetadata": true
   }
 }

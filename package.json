@@ -2,8 +2,8 @@
   "name": "react-mobx-parcel",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --public-url '/'",
+    "web": "parcel ./src/static/index.html",
+    "build": "parcel build ./src/static/index.html --public-url '/'",
     "prettify": "prettier --write src/**/*.tsx",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "helpful-decorators": "^1.7.2",
+    "inversify": "^4.13.0",
+    "inversify-react": "^0.2.7",
     "lodash": "^4.17.11",
     "lodash.debounce": "^4.0.8",
     "lodash.memoize": "^4.1.2",
@@ -24,6 +26,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "reflect-metadata": "^0.1.12",
     "rxjs": "^6.3.3",
     "schedule": "^0.5.0"
   },

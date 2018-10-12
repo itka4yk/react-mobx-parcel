@@ -1,6 +1,8 @@
 dependencies:
   axios: 0.18.0
   helpful-decorators: 1.7.2
+  inversify: 4.13.0
+  inversify-react: 0.2.7
   lodash: 4.17.11
   lodash.debounce: 4.0.8
   lodash.memoize: 4.1.2
@@ -14,6 +16,7 @@ dependencies:
   prop-types: 15.6.2
   react: 16.5.2
   react-dom: 16.5.2
+  reflect-metadata: 0.1.12
   rxjs: 6.3.3
   schedule: 0.5.0
 devDependencies:
@@ -3625,8 +3628,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
+  /inversify-react/0.2.7:
+    dependencies:
+      prop-types: 15.6.2
+    dev: false
+    peerDependencies:
+      inversify: ^3.0.0 || ^4.0.0
+      react: ^15.0.0 || ^16.0.0
+    resolution:
+      integrity: sha512-IjUW+0vr2EEvzdeHWuYHgc//IdxdRuY01sYuDtohLP3PqBueSnHHQMeYDwcZE0TYTS9FOh8DmrJPTw3l6nehSw==
   /inversify/4.13.0:
-    dev: true
     resolution:
       integrity: sha512-O5d8y7gKtyRwrvTLZzYET3kdFjqUy58sGpBYMARF13mzqDobpfBXVOPLH7HmnD2VR6Q+1HzZtslGvsdQfeb0SA==
   /invert-kv/1.0.0:
@@ -6680,7 +6691,6 @@ packages:
     resolution:
       integrity: sha1-WiAL+S4ON3UXUv5FsKszD9S2vpk=
   /reflect-metadata/0.1.12:
-    dev: true
     resolution:
       integrity: sha512-n+IyV+nGz3+0q3/Yf1ra12KpCyi001bi4XFxSjbiWWjfqb52iTTtpGXmCCAOWWIAn9KEuFZKGqBERHmrtScZ3A==
   /regenerate-unicode-properties/7.0.0:
@@ -8197,6 +8207,8 @@ specifiers:
   axios: ^0.18.0
   helpful-decorators: ^1.7.2
   husky: ^1.0.0-rc.9
+  inversify: ^4.13.0
+  inversify-react: ^0.2.7
   jest: ^23.6.0
   lint-staged: ^7.3.0
   lodash: ^4.17.11
@@ -8216,6 +8228,7 @@ specifiers:
   react-dom: ^16.5.2
   react-test-renderer: ^16.5.2
   react-testing-library: ^5.1.0
+  reflect-metadata: ^0.1.12
   rxjs: ^6.3.3
   schedule: ^0.5.0
   ts-jest: ^23.10.1
