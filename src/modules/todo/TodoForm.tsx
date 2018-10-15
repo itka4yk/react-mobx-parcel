@@ -10,25 +10,35 @@ interface IInjectedProps {
 }
 
 interface IState {
-  todo: string;
+  todoType: string;
+  todoBody: string;
 }
 
 @InjectProps({ store: TodoStoreType })
 class TodoForm extends React.Component<IInjectedProps, IState> {
-  constructor(props: Readonly<IInjectedProps>) {
-    super(props);
-    this.state = {
-      todo: '',
-    };
-  }
+  state: IState = {
+    todoType: '',
+    todoBody: '',
+  };
   render() {
     return (
       <div>
+        <label>Type:</label>
         <input
-          value={this.state.todo}
-          onChange={e => this.setState({ todo: e.target.value })}
+          value={this.state.todoType}
+          onChange={e => this.setState({ todoType: e.target.value })}
         />
-        <button onClick={() => this.props.store.addTodo(this.state.todo)}>
+        <br />
+        <label>Body:</label>
+        <input
+          value={this.state.todoBody}
+          onChange={e => this.setState({ todoBody: e.target.value })}
+        />
+        <button
+          onClick={() =>
+            this.props.store.addTodo(this.state.todoType, this.state.todoBody)
+          }
+        >
           Save
         </button>
       </div>

@@ -1,7 +1,21 @@
+export interface ITodo {
+  type: string;
+  body: string;
+}
+
 export interface ITodoStore {
-  todos: string[];
+  todos: ITodo[];
+  addTodo(type: string, body: string): void;
   count: number;
-  addTodo(todo: string): void;
+  todoTypes: number;
+  shortCount: number;
 }
 
 export const TodoStoreType = Symbol('TodoStore');
+
+export interface ITodoStatisticsStore {
+  count: number;
+  typeCount: number;
+}
+
+export const TodoStatisticsStoreType = Symbol('TodoStatisticsStore');

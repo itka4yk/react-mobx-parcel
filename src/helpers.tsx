@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import * as React from 'react';
 
 interface IInjectProps {
-  [typeName: string]: symbol;
+  [typeName: string]: string | symbol;
 }
 
 interface ICallbackResult {
