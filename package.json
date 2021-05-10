@@ -13,7 +13,7 @@
     "helpful-decorators": "^2.0.4",
     "inversify": "^5.0.1",
     "inversify-react": "^0.4.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "lodash.memoize": "^4.1.2",
     "lodash.once": "^4.1.1",
